@@ -345,15 +345,24 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Implementation of the Romania problem as described in
- http://www.pearsonhighered.com/assets/hip/us/hip_us_pearsonhighered/samplechapter/0136042597.pdf. The graph and the
- heuristic functions are defined in the class <code><a href="../../../../../es/usc/citius/hipster/util/examples/RomanianProblem.html">RomanianProblem</a></code>.
+<p>Example of graph search using the Romania problem described
+ <a href =http://www.pearsonhighered.com/assets/hip/us/hip_us_pearsonhighered/samplechapter/0136042597.pdf>here</a>.
+ <p>
+ This example consists in a search problem based on a <code><a href="../../../../../es/usc/citius/hipster/graph/HipsterGraph.html">HipsterGraph</a></code>. Main
+ characteristics of this example are:
+ <ul>
+      <li>Uses <code><a href="../../../../../es/usc/citius/hipster/graph/GraphSearchProblem.html">GraphSearchProblem</a></code>, a subclass of <code><a href="../../../../../es/usc/citius/hipster/model/problem/SearchProblem.html">SearchProblem</a></code> specially designed to facilitate
+      working with graph search problems.</li>
+      <li>The nodes of the graph are different cities in Romania.</li>
+      <li>Edges of the graph (connectivity between cities) are defined in the link above.</li>
+      <li>Graph nodes and edges are defined in <code><a href="../../../../../es/usc/citius/hipster/util/examples/RomanianProblem.html">RomanianProblem</a></code></li>
+      <li>Finds the shortest path between the cities Arad and Bucharest.</li>
+      <li>Cost function takes the cost of moving between cities from the arcs of the graph.</li>
+ </ul>
 
- This example is based in the graph definition of the Romania problem, which is a graph where the
- nodes are the main cities of Romania, connected by arcs that represent the roads of the country, whose
- weight is the distance in km between the cities.
- The Goal of the problem is always the city of Bucharest. The heuristic of the problem is the distance
- in km of the straight line between each city and Bucharest.</p>
+ Although a heuristic is not used in this example (so A* behaves as Dijkstra's algorithm), it is defined in
+ <code><a href="../../../../../es/usc/citius/hipster/util/examples/RomanianProblem.html#heuristicFunction()">heuristicFunction()</a></code>. This heuristic stores the Euclidean Distance between each city and
+ Bucharest.</p>
 
 
 

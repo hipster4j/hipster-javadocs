@@ -345,19 +345,22 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>This example creates an undirected graph
- <code><a href="../../../../../es/usc/citius/hipster/graph/HipsterGraph.html">HipsterGraph</a></code> and performs a simple search
- using DFS.
- 
- We use the GraphSearchProblem util
- <code><a href="../../../../../es/usc/citius/hipster/model/problem/SearchProblem.html">SearchProblem</a></code> to create the
- problem. The initial state (since we are dealing with graphs, this means
- initial node) is set using this util, as well as other aspects of the search
- problem such as the cost associated with each action (since we are dealing
- with graphs the cost is simply the cost of the edge).
- 
- We finally set the goal state (aka the node to find) and print.
-</p>
+<p>Example of graph search with manual creation of the graph structure.
+ <p>
+ In this example an undirected <code><a href="../../../../../es/usc/citius/hipster/graph/HipsterGraph.html">HipsterGraph</a></code> is created, and then
+ a search using DFS is executed. Summarized characteristics of this
+ example are:
+ <ul>
+      <li>Uses <code><a href="../../../../../es/usc/citius/hipster/graph/GraphSearchProblem.html">GraphSearchProblem</a></code>, a subclass of <code><a href="../../../../../es/usc/citius/hipster/model/problem/SearchProblem.html">SearchProblem</a></code> specially designed to facilitate
+      working with graph search problems.</li>
+      <li>An undirected graph is created introducing manually the data in the <code><a href="../../../../../es/usc/citius/hipster/graph/HipsterGraph.html">HipsterGraph</a></code>.</li>
+      <li>Cost function takes the cost of moving between cities from the arcs of the graph.</li>
+ </ul>
+
+ In this example the search problem is defined from the initial state, extracting the costs from the arcs
+ of the graph. The goal is set after creating the search problem, at the end.
+ <p>
+ Since DFS is an uninformed search algorithm an heuristic is not needed to be defined.</p>
 
 
 

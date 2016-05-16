@@ -345,14 +345,26 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Implementation of the 8-puzzle search problem, represented as an array. It is solved
- using the Dijkstra algorithm.
+<p>Example of using Hipster to solve the 8-puzzle search problem problem using the
+ Dijkstra's algorithm.
+ <p>
+ In this example a <code><a href="../../../../../es/usc/citius/hipster/model/problem/SearchProblem.html">SearchProblem</a></code> is used to define the components of the search, and
+ the search iterator is later instantiated using this structure. This summarizes the content
+ of this example:
+ <ul>
+     <li>Uses <code><a href="../../../../../es/usc/citius/hipster/model/problem/SearchProblem.html">SearchProblem</a></code>, a structure created to facilitate organizing and storing the components
+     of the search.</li>
+     <li>The state of the 8-puzzle problem is modeled as an array. Each position of the array stores the number
+     of each piece of the puzzle at the given position, meaning the 0 the empty space.</li>
+     <li>This problem is modeled with actions, so an <code><a href="../../../../../es/usc/citius/hipster/model/function/ActionFunction.html">ActionFunction</a></code> is used.
+     This function analyzes which actions are applicable in each state. Valid actions for this problem are moving the
+     empty space in each of the following directions: UP, DOWN, LEFT, RIGHT.</li>
+     <li>The <code><a href="../../../../../es/usc/citius/hipster/model/function/TransitionFunction.html">TransitionFunction</a></code>
+     creates the <code><a href="../../../../../es/usc/citius/hipster/model/Transition.html">Transition</a></code> resulting from apply the given actions to the current state.</li>
+     <li>The <code><a href="../../../../../es/usc/citius/hipster/model/function/CostFunction.html">CostFunction</a></code> for this problem is unitary. All actions have unitary cost.</li>
+ </ul>
 
- This problem defines an action function, from a state it retrieves the set of
- actions which can be applied to reach other states. The transition function takes
- the action applied to the current state and the to obtain the successor one.
- As cost function we assign a constant value to each action, so the objective is to
- minimize the number of actions to solve the 8-puzzle.</p>
+ The objective of this search problem is to minimize the number of actions to solve the 8-puzzle.</p>
 
 
 

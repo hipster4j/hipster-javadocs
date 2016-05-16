@@ -345,13 +345,17 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Example using a 2D <code><a href="../../../../../es/usc/citius/hipster/util/examples/maze/Maze2D.html">Maze2D</a></code>, solved using the A* algorithm.
-
- This example consists in a search problem without explicit actions defined, which uses
- a transition function implemented in the class <code><a href="../../../../../es/usc/citius/hipster/util/examples/maze/Maze2D.html">Maze2D</a></code>
- to return the accessible states from the current. The cost functions is the Euclidean distance
- between points and the heuristic is not defined. In this case, the heuristic value is
- 0 for all states, which forces A* to act in the same way as the Dijkstra algorithm.</p>
+<p>Example using a bidimensional maze, solved using the A* algorithm.
+ <p>
+ This example consists in a search problem in a <code><a href="../../../../../es/usc/citius/hipster/util/examples/maze/Maze2D.html">Maze2D</a></code>. This problem is characterized by:
+ <ul>
+      <li>The problem is defined without explicit actions</li>
+      <li>It uses a transition function implemented in the class <code><a href="../../../../../es/usc/citius/hipster/util/examples/maze/Maze2D.html">Maze2D</a></code>, which returns the accessible states from the current.</li>
+      <li>The cost functions is the Euclidean distance between points.</li>
+      <li>Heuristic function is also Euclidean Distance.</li>
+ </ul>
+ This example illustrates how to instantiate a <code><a href="../../../../../es/usc/citius/hipster/model/problem/SearchProblem.html">SearchProblem</a></code> and each one of the components
+ required for search, explaining what they do.</p>
 
 
 
