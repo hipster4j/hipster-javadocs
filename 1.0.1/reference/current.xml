@@ -1,0 +1,8281 @@
+<api>
+<package name="es.usc.citius.hipster.algorithm"
+>
+<class name="ADStarForward"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ADStarForward"
+ type="es.usc.citius.hipster.algorithm.ADStarForward"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="begin" type="S">
+</parameter>
+<parameter name="goal" type="S">
+</parameter>
+<parameter name="expander" type="es.usc.citius.hipster.model.function.impl.ADStarNodeExpander&lt;A, S, C, N&gt;">
+</parameter>
+</constructor>
+<constructor name="ADStarForward"
+ type="es.usc.citius.hipster.algorithm.ADStarForward"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="begin" type="S">
+</parameter>
+<parameter name="goals" type="java.util.Collection&lt;S&gt;">
+</parameter>
+<parameter name="expander" type="es.usc.citius.hipster.model.function.impl.ADStarNodeExpander&lt;A, S, C, N&gt;">
+</parameter>
+</constructor>
+<method name="iterator"
+ return="es.usc.citius.hipster.algorithm.ADStarForward.Iterator"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="begin"
+ type="S"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="expander"
+ type="es.usc.citius.hipster.model.function.impl.ADStarNodeExpander"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="goals"
+ type="java.util.Collection"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="ADStarForward.Iterator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<constructor name="ADStarForward.Iterator"
+ type="es.usc.citius.hipster.algorithm.ADStarForward.Iterator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="getClosed"
+ return="java.util.Map&lt;S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIncons"
+ return="java.util.Map&lt;S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOpen"
+ return="java.util.Map&lt;S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="insertOpen"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+<method name="next"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="takePromising"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="updateQueues"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+<field name="beginNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="closed"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="goalNodes"
+ type="java.util.Collection"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="incons"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="open"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="queue"
+ type="java.util.Queue"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="transitionsChanged"
+ type="java.lang.Iterable"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="AStar"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AStar"
+ type="es.usc.citius.hipster.algorithm.AStar"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="expander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<method name="iterator"
+ return="es.usc.citius.hipster.algorithm.AStar.Iterator"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="expander"
+ type="es.usc.citius.hipster.model.function.NodeExpander"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="initialNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="AStar.Iterator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<constructor name="AStar.Iterator"
+ type="es.usc.citius.hipster.algorithm.AStar.Iterator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="getClosed"
+ return="java.util.Map&lt;S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOpen"
+ return="java.util.Map&lt;S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQueue"
+ return="java.util.Queue&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setClosed"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="closed" type="java.util.Map&lt;S, N&gt;">
+</parameter>
+</method>
+<method name="setOpen"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="open" type="java.util.Map&lt;S, N&gt;">
+</parameter>
+</method>
+<method name="setQueue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="queue" type="java.util.Queue&lt;N&gt;">
+</parameter>
+</method>
+<method name="takePromising"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<field name="closed"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="open"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="queue"
+ type="java.util.Queue"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="Algorithm"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.Iterable">
+</implements>
+<constructor name="Algorithm"
+ type="es.usc.citius.hipster.algorithm.Algorithm"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="recoverActionPath"
+ return="java.util.List&lt;A&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+<method name="recoverStatePath"
+ return="java.util.List&lt;S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+<method name="search"
+ return="es.usc.citius.hipster.algorithm.Algorithm.SearchResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="goalState" type="S">
+</parameter>
+</method>
+<method name="search"
+ return="es.usc.citius.hipster.algorithm.Algorithm.SearchResult"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="condition" type="es.usc.citius.hipster.util.Predicate&lt;N&gt;">
+</parameter>
+</method>
+<method name="search"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="es.usc.citius.hipster.algorithm.Algorithm.SearchListener&lt;N&gt;">
+</parameter>
+</method>
+</class>
+<interface name="Algorithm.SearchListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="handle"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+</interface>
+<class name="Algorithm.SearchResult"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Algorithm.SearchResult"
+ type="es.usc.citius.hipster.algorithm.Algorithm.SearchResult"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="goalNode" type="N">
+</parameter>
+<parameter name="iterations" type="int">
+</parameter>
+<parameter name="elapsed" type="long">
+</parameter>
+</constructor>
+<constructor name="Algorithm.SearchResult"
+ type="es.usc.citius.hipster.algorithm.Algorithm.SearchResult"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="goalNodes" type="java.util.Collection&lt;N&gt;">
+</parameter>
+<parameter name="iterations" type="int">
+</parameter>
+<parameter name="elapsed" type="long">
+</parameter>
+</constructor>
+<method name="getElapsed"
+ return="long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getGoalNode"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getGoalNodes"
+ return="java.util.Collection&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIterations"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOptimalPaths"
+ return="java.util.List&lt;java.util.List&lt;S&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="BellmanFord"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BellmanFord"
+ type="es.usc.citius.hipster.algorithm.BellmanFord"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="nodeExpander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<method name="getInitialNode"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getNodeExpander"
+ return="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isCheckNegativeCycles"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="iterator"
+ return="es.usc.citius.hipster.algorithm.BellmanFord.Iterator"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setCheckNegativeCycles"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="checkNegativeCycles" type="boolean">
+</parameter>
+</method>
+<method name="setInitialNode"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+</method>
+<method name="setNodeExpander"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="nodeExpander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</method>
+<field name="checkNegativeCycles"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="initialNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="nodeExpander"
+ type="es.usc.citius.hipster.model.function.NodeExpander"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="BellmanFord.Iterator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<constructor name="BellmanFord.Iterator"
+ type="es.usc.citius.hipster.algorithm.BellmanFord.Iterator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="dequeue"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="enqueue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="explored"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="queue"
+ type="java.util.Queue"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="BreadthFirstSearch"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BreadthFirstSearch"
+ type="es.usc.citius.hipster.algorithm.BreadthFirstSearch"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="expander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<method name="iterator"
+ return="es.usc.citius.hipster.algorithm.BreadthFirstSearch.Iterator"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="expander"
+ type="es.usc.citius.hipster.model.function.NodeExpander"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="initialNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="BreadthFirstSearch.Iterator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<constructor name="BreadthFirstSearch.Iterator"
+ type="es.usc.citius.hipster.algorithm.BreadthFirstSearch.Iterator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="getQueue"
+ return="java.util.Queue&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getVisited"
+ return="java.util.Map&lt;S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setQueue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="queue" type="java.util.Queue&lt;N&gt;">
+</parameter>
+</method>
+<method name="setVisited"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="visited" type="java.util.Map&lt;S, N&gt;">
+</parameter>
+</method>
+<field name="queue"
+ type="java.util.Queue"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="visited"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="DepthFirstSearch"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="DepthFirstSearch"
+ type="es.usc.citius.hipster.algorithm.DepthFirstSearch"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="expander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<method name="iterator"
+ return="java.util.Iterator&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="expander"
+ type="es.usc.citius.hipster.model.function.NodeExpander"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="initialNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="DepthFirstSearch.Iterator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<constructor name="DepthFirstSearch.Iterator"
+ type="es.usc.citius.hipster.algorithm.DepthFirstSearch.Iterator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="getClosed"
+ return="java.util.Set&lt;S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getNext"
+ return="es.usc.citius.hipster.algorithm.DepthFirstSearch.StackFrameNode"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStack"
+ return="java.util.Deque&lt;es.usc.citius.hipster.algorithm.DepthFirstSearch.StackFrameNode&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isGraphSupport"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="nextUnvisited"
+ return="es.usc.citius.hipster.algorithm.DepthFirstSearch.StackFrameNode"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="processNextNode"
+ return="es.usc.citius.hipster.algorithm.DepthFirstSearch.StackFrameNode"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setClosed"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="closed" type="java.util.Set&lt;S&gt;">
+</parameter>
+</method>
+<method name="setGraphSupport"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="graphSupport" type="boolean">
+</parameter>
+</method>
+<method name="setNext"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="next" type="es.usc.citius.hipster.algorithm.DepthFirstSearch.StackFrameNode">
+</parameter>
+</method>
+<method name="setStack"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="stack" type="java.util.Deque&lt;es.usc.citius.hipster.algorithm.DepthFirstSearch.StackFrameNode&gt;">
+</parameter>
+</method>
+<field name="closed"
+ type="java.util.Set"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="graphSupport"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="next"
+ type="es.usc.citius.hipster.algorithm.DepthFirstSearch.StackFrameNode"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="stack"
+ type="java.util.Deque"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="DepthFirstSearch.StackFrameNode"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getNode"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSuccessors"
+ return="java.util.Iterator&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isProcessed"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isVisited"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="DepthLimitedSearch"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="DepthLimitedSearch"
+ type="es.usc.citius.hipster.algorithm.DepthLimitedSearch"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="finalNode" type="N">
+</parameter>
+<parameter name="nodeExpander" type="es.usc.citius.hipster.model.function.NodeExpander">
+</parameter>
+<parameter name="maximumDepth" type="int">
+</parameter>
+</constructor>
+<method name="execute"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentDepth"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMaximumDepth"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPath"
+ return="java.util.ArrayList&lt;S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="incrementCurrentDepth"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="iterator"
+ return="java.util.Iterator&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="currentDepth"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="finalNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="initialNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="maximumDepth"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="nodeExpander"
+ type="es.usc.citius.hipster.model.function.NodeExpander"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="path"
+ type="java.util.ArrayList"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="Hipster"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="createADStar"
+ return="es.usc.citius.hipster.algorithm.ADStarForward&lt;A, S, C, es.usc.citius.hipster.model.impl.ADStarNodeImpl&lt;A, S, C&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchComponents&lt;A, S, C&gt;">
+</parameter>
+</method>
+<method name="createAStar"
+ return="es.usc.citius.hipster.algorithm.AStar&lt;A, S, C, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+</method>
+<method name="createAnnealingSearch"
+ return="es.usc.citius.hipster.algorithm.localsearch.AnnealingSearch&lt;A, S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+<parameter name="alpha" type="java.lang.Double">
+</parameter>
+<parameter name="minTemp" type="java.lang.Double">
+</parameter>
+<parameter name="acceptanceProbability" type="es.usc.citius.hipster.algorithm.localsearch.AnnealingSearch.AcceptanceProbability">
+</parameter>
+<parameter name="successorFinder" type="es.usc.citius.hipster.algorithm.localsearch.AnnealingSearch.SuccessorFinder&lt;A, S, N&gt;">
+</parameter>
+</method>
+<method name="createBellmanFord"
+ return="es.usc.citius.hipster.algorithm.BellmanFord&lt;A, S, C, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+</method>
+<method name="createBreadthFirstSearch"
+ return="es.usc.citius.hipster.algorithm.BreadthFirstSearch&lt;A, S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+</method>
+<method name="createDepthFirstSearch"
+ return="es.usc.citius.hipster.algorithm.DepthFirstSearch&lt;A, S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+</method>
+<method name="createDepthLimitedSearch"
+ return="es.usc.citius.hipster.algorithm.DepthLimitedSearch&lt;A, S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+<parameter name="depth" type="int">
+</parameter>
+</method>
+<method name="createDijkstra"
+ return="es.usc.citius.hipster.algorithm.AStar&lt;A, S, C, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+</method>
+<method name="createHillClimbing"
+ return="es.usc.citius.hipster.algorithm.localsearch.HillClimbing&lt;A, S, C, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+<parameter name="enforced" type="boolean">
+</parameter>
+</method>
+<method name="createIDAStar"
+ return="es.usc.citius.hipster.algorithm.IDAStar&lt;A, S, C, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+</method>
+<method name="createMultiobjectiveLS"
+ return="es.usc.citius.hipster.algorithm.MultiobjectiveLS&lt;A, S, C, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, N&gt;">
+</parameter>
+</method>
+</class>
+<class name="IDAStar"
+ extends="es.usc.citius.hipster.algorithm.DepthFirstSearch"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="IDAStar"
+ type="es.usc.citius.hipster.algorithm.IDAStar"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="expander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+</class>
+<class name="IDAStar.Iterator"
+ extends="es.usc.citius.hipster.algorithm.DepthFirstSearch.Iterator"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="IDAStar.Iterator"
+ type="es.usc.citius.hipster.algorithm.IDAStar.Iterator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="getMinfLimit"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getReinitialization"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getfLimit"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setMinfLimit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="minfLimit" type="C">
+</parameter>
+</method>
+<method name="setReinitialization"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="reinitialization" type="int">
+</parameter>
+</method>
+<method name="setfLimit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fLimit" type="C">
+</parameter>
+</method>
+<method name="updateMinFLimit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="currentFLimit" type="C">
+</parameter>
+</method>
+<field name="fLimit"
+ type="C"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="minfLimit"
+ type="C"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="reinitialization"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="MultiobjectiveLS"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MultiobjectiveLS"
+ type="es.usc.citius.hipster.algorithm.MultiobjectiveLS"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="nodeExpander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<method name="iterator"
+ return="java.util.Iterator&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="initialNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="nodeExpander"
+ type="es.usc.citius.hipster.model.function.NodeExpander"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="MultiobjectiveLS.Iterator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<constructor name="MultiobjectiveLS.Iterator"
+ type="es.usc.citius.hipster.algorithm.MultiobjectiveLS.Iterator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="dominatedBy"
+ return="java.util.Collection&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="node" type="N">
+</parameter>
+<parameter name="nonDominated" type="java.lang.Iterable&lt;N&gt;">
+</parameter>
+</method>
+<method name="getNonDominated"
+ return="java.util.Map&lt;S, java.util.Collection&lt;N&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQueue"
+ return="java.util.Queue&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isDominated"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="node" type="N">
+</parameter>
+<parameter name="nonDominated" type="java.lang.Iterable&lt;N&gt;">
+</parameter>
+</method>
+<method name="next"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="nonDominated"
+ type="java.util.Map"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="queue"
+ type="java.util.Queue"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="NegativeCycleException"
+ extends="java.lang.RuntimeException"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="NegativeCycleException"
+ type="es.usc.citius.hipster.algorithm.NegativeCycleException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+</class>
+</package>
+<package name="es.usc.citius.hipster.algorithm.localsearch"
+>
+<class name="AnnealingSearch"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AnnealingSearch"
+ type="es.usc.citius.hipster.algorithm.localsearch.AnnealingSearch"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="nodeExpander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+<parameter name="alpha" type="java.lang.Double">
+</parameter>
+<parameter name="minTemp" type="java.lang.Double">
+</parameter>
+<parameter name="acceptanceProbability" type="es.usc.citius.hipster.algorithm.localsearch.AnnealingSearch.AcceptanceProbability">
+</parameter>
+<parameter name="successorFinder" type="es.usc.citius.hipster.algorithm.localsearch.AnnealingSearch.SuccessorFinder&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<method name="iterator"
+ return="es.usc.citius.hipster.algorithm.localsearch.AnnealingSearch.ASIterator"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AnnealingSearch.ASIterator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="AnnealingSearch.AcceptanceProbability"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="compute"
+ return="java.lang.Double"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oldScore" type="java.lang.Double">
+</parameter>
+<parameter name="newScore" type="java.lang.Double">
+</parameter>
+<parameter name="temp" type="java.lang.Double">
+</parameter>
+</method>
+</interface>
+<interface name="AnnealingSearch.SuccessorFinder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="estimate"
+ return="N"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="node" type="N">
+</parameter>
+<parameter name="nodeExpander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</method>
+</interface>
+<class name="HillClimbing"
+ extends="es.usc.citius.hipster.algorithm.Algorithm"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="HillClimbing"
+ type="es.usc.citius.hipster.algorithm.localsearch.HillClimbing"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="nodeExpander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<constructor name="HillClimbing"
+ type="es.usc.citius.hipster.algorithm.localsearch.HillClimbing"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="nodeExpander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+<parameter name="enforcedHillClimbing" type="boolean">
+</parameter>
+</constructor>
+<method name="iterator"
+ return="es.usc.citius.hipster.algorithm.localsearch.HillClimbing.EHCIterator"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="HillClimbing.EHCIterator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<method name="getBestScore"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQueue"
+ return="java.util.Queue&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setBestScore"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bestScore" type="C">
+</parameter>
+</method>
+<method name="setQueue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="queue" type="java.util.Queue&lt;N&gt;">
+</parameter>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.examples"
+>
+<class name="ASCIIMazeVisualizer"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ASCIIMazeVisualizer"
+ type="es.usc.citius.hipster.examples.ASCIIMazeVisualizer"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="frame" type="javax.swing.JFrame">
+</parameter>
+</constructor>
+<method name="$$$getRootComponent$$$"
+ return="javax.swing.JComponent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+</method>
+</class>
+<class name="BlueprintsGraphMultiobjectiveSearch"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BlueprintsGraphMultiobjectiveSearch"
+ type="es.usc.citius.hipster.examples.BlueprintsGraphMultiobjectiveSearch"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+<class name="DirectedGraphSearchExample"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="DirectedGraphSearchExample"
+ type="es.usc.citius.hipster.examples.DirectedGraphSearchExample"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+</method>
+</class>
+<class name="EightPuzzleProblemExample"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EightPuzzleProblemExample"
+ type="es.usc.citius.hipster.examples.EightPuzzleProblemExample"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+</method>
+</class>
+<class name="EightQueensProblemExample"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EightQueensProblemExample"
+ type="es.usc.citius.hipster.examples.EightQueensProblemExample"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+</method>
+</class>
+<class name="EightQueensProblemExampleWithAnnealingSearch"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EightQueensProblemExampleWithAnnealingSearch"
+ type="es.usc.citius.hipster.examples.EightQueensProblemExampleWithAnnealingSearch"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+</method>
+</class>
+<class name="MazeShortestPathExample"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MazeShortestPathExample"
+ type="es.usc.citius.hipster.examples.MazeShortestPathExample"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+</class>
+<class name="RomanianProblemExample"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="RomanianProblemExample"
+ type="es.usc.citius.hipster.examples.RomanianProblemExample"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+</class>
+<class name="SimpleEightPuzzleExample"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="SimpleEightPuzzleExample"
+ type="es.usc.citius.hipster.examples.SimpleEightPuzzleExample"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+</method>
+</class>
+<class name="UndirectedGraphSearchExample"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="UndirectedGraphSearchExample"
+ type="es.usc.citius.hipster.examples.UndirectedGraphSearchExample"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="main"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="java.lang.String[]">
+</parameter>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.examples.problem"
+>
+<class name="NPuzzle"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getPrettyPath"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="path" type="java.util.List&lt;es.usc.citius.hipster.examples.problem.NPuzzle.Puzzle&gt;">
+</parameter>
+<parameter name="size" type="int">
+</parameter>
+</method>
+</class>
+<class name="NPuzzle.Puzzle"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="NPuzzle.Puzzle"
+ type="es.usc.citius.hipster.examples.problem.NPuzzle.Puzzle"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="board" type="int[][]">
+</parameter>
+</constructor>
+<constructor name="NPuzzle.Puzzle"
+ type="es.usc.citius.hipster.examples.problem.NPuzzle.Puzzle"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="plainBoard" type="int[]">
+</parameter>
+</constructor>
+<method name="copyBoard"
+ return="int[][]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMatrixBoard"
+ return="int[][]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPreviousBoard"
+ return="es.usc.citius.hipster.examples.problem.NPuzzle.Puzzle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTile"
+ return="java.awt.Point"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="number" type="int">
+</parameter>
+</method>
+<method name="setPreviousBoard"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="previousBoard" type="es.usc.citius.hipster.examples.problem.NPuzzle.Puzzle">
+</parameter>
+</method>
+</class>
+<class name="NPuzzle.PuzzleMove"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="es.usc.citius.hipster.examples.problem.NPuzzle.PuzzleMove"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="es.usc.citius.hipster.examples.problem.NPuzzle.PuzzleMove[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="NQueens"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="NQueens"
+ type="es.usc.citius.hipster.examples.problem.NQueens"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="size" type="int">
+</parameter>
+</constructor>
+<constructor name="NQueens"
+ type="es.usc.citius.hipster.examples.problem.NQueens"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="queens" type="int[]">
+</parameter>
+</constructor>
+<method name="attackedQueens"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getQueens"
+ return="int[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isAttacked"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="row" type="int">
+</parameter>
+<parameter name="column" type="int">
+</parameter>
+</method>
+<method name="isAttacked"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="row" type="int">
+</parameter>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.extensions.graph"
+>
+<class name="HashTableHipsterDirectedGraph"
+ extends="es.usc.citius.hipster.extensions.graph.HashTableHipsterGraph"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterDirectedGraph">
+</implements>
+<constructor name="HashTableHipsterDirectedGraph"
+ type="es.usc.citius.hipster.extensions.graph.HashTableHipsterDirectedGraph"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="create"
+ return="es.usc.citius.hipster.extensions.graph.HashTableHipsterDirectedGraph&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="incomingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="outgoingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+</class>
+<class name="HashTableHipsterGraph"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterGraph">
+</implements>
+<constructor name="HashTableHipsterGraph"
+ type="es.usc.citius.hipster.extensions.graph.HashTableHipsterGraph"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="add"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v" type="V">
+</parameter>
+</method>
+<method name="connect"
+ return="es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v1" type="V">
+</parameter>
+<parameter name="v2" type="V">
+</parameter>
+<parameter name="value" type="E">
+</parameter>
+</method>
+<method name="create"
+ return="es.usc.citius.hipster.extensions.graph.HashTableHipsterGraph&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="edges"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="edgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v" type="V">
+</parameter>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v" type="V">
+</parameter>
+<parameter name="edge" type="es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;">
+</parameter>
+</method>
+<method name="vertices"
+ return="java.lang.Iterable&lt;V&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="disconnected"
+ type="java.util.Set"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="graphTable"
+ type="com.google.common.collect.HashBasedTable"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+</package>
+<package name="es.usc.citius.hipster.graph"
+>
+<class name="DirectedEdge"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.GraphEdge">
+</implements>
+<constructor name="DirectedEdge"
+ type="es.usc.citius.hipster.graph.DirectedEdge"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex1" type="V">
+</parameter>
+<parameter name="vertex2" type="V">
+</parameter>
+<parameter name="value" type="E">
+</parameter>
+</constructor>
+<method name="getEdgeValue"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getType"
+ return="es.usc.citius.hipster.graph.GraphEdge.Type"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getVertex1"
+ return="V"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getVertex2"
+ return="V"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="GraphBuilder"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="buildDirectedGraph"
+ return="es.usc.citius.hipster.graph.HipsterDirectedGraph"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+</method>
+<method name="buildUndirectedGraph"
+ return="es.usc.citius.hipster.graph.HipsterGraph"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="deprecated"
+ visibility="public"
+>
+</method>
+<method name="connect"
+ return="es.usc.citius.hipster.graph.GraphBuilder.Vertex1"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="connect"
+ return="es.usc.citius.hipster.graph.GraphBuilder&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex1" type="V">
+</parameter>
+<parameter name="vertex2" type="V">
+</parameter>
+</method>
+<method name="create"
+ return="es.usc.citius.hipster.graph.GraphBuilder&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="createDirectedGraph"
+ return="es.usc.citius.hipster.graph.HipsterDirectedGraph&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="createUndirectedGraph"
+ return="es.usc.citius.hipster.graph.HipsterGraph&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="GraphBuilder.Vertex1"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="to"
+ return="es.usc.citius.hipster.graph.GraphBuilder.Vertex1.Vertex2"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+</class>
+<class name="GraphBuilder.Vertex1.Vertex2"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="withEdge"
+ return="es.usc.citius.hipster.graph.GraphBuilder&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="edge" type="E">
+</parameter>
+</method>
+</class>
+<interface name="GraphEdge"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getEdgeValue"
+ return="E"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getType"
+ return="es.usc.citius.hipster.graph.GraphEdge.Type"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getVertex1"
+ return="V"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getVertex2"
+ return="V"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="GraphEdge.Type"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="es.usc.citius.hipster.graph.GraphEdge.Type"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="es.usc.citius.hipster.graph.GraphEdge.Type[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="GraphSearchProblem"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GraphSearchProblem"
+ type="es.usc.citius.hipster.graph.GraphSearchProblem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="startingFrom"
+ return="es.usc.citius.hipster.graph.GraphSearchProblem.FromVertex&lt;V&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+</class>
+<class name="GraphSearchProblem.FromVertex"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="goalAt"
+ return="es.usc.citius.hipster.graph.GraphSearchProblem.FromVertex&lt;V&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="in"
+ return="es.usc.citius.hipster.graph.GraphSearchProblem.FromVertex.CostType&lt;E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="graph" type="es.usc.citius.hipster.graph.HipsterGraph&lt;V, E&gt;">
+</parameter>
+</method>
+</class>
+<class name="GraphSearchProblem.FromVertex.CostType"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="build"
+ return="es.usc.citius.hipster.model.problem.SearchProblem&lt;E, V, es.usc.citius.hipster.model.impl.UnweightedNode&lt;E, V&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="extractCostFromEdges"
+ return="es.usc.citius.hipster.graph.GraphSearchProblem.FromVertex.CostType.HeuristicType&lt;java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="extractor" type="es.usc.citius.hipster.util.Function&lt;E, java.lang.Double&gt;">
+</parameter>
+</method>
+<method name="takeCostsFromEdges"
+ return="es.usc.citius.hipster.graph.GraphSearchProblem.FromVertex.CostType.HeuristicType&lt;java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="useGenericCosts"
+ return="es.usc.citius.hipster.graph.GraphSearchProblem.FromVertex.CostType.HeuristicType&lt;C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="costAlgebra" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+</method>
+</class>
+<class name="GraphSearchProblem.FromVertex.CostType.HeuristicType"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="build"
+ return="es.usc.citius.hipster.model.problem.SearchProblem&lt;E, V, es.usc.citius.hipster.model.impl.WeightedNode&lt;E, V, C&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="useHeuristicFunction"
+ return="es.usc.citius.hipster.graph.GraphSearchProblem.FromVertex.CostType.HeuristicType.Final"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="hf" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;V, C&gt;">
+</parameter>
+</method>
+<method name="useScaleAlgebra"
+ return="es.usc.citius.hipster.graph.GraphSearchProblem.FromVertex.CostType.HeuristicType&lt;C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="scaleAlgebra" type="es.usc.citius.hipster.model.function.impl.ScalarOperation&lt;C&gt;">
+</parameter>
+</method>
+</class>
+<class name="GraphSearchProblem.FromVertex.CostType.HeuristicType.Final"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="build"
+ return="es.usc.citius.hipster.model.problem.SearchProblem&lt;E, V, es.usc.citius.hipster.model.impl.WeightedNode&lt;E, V, C&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="components"
+ return="es.usc.citius.hipster.model.problem.SearchComponents&lt;E, V, C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="HashBasedHipsterDirectedGraph"
+ extends="es.usc.citius.hipster.graph.HashBasedHipsterGraph"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterDirectedGraph">
+</implements>
+<implements name="es.usc.citius.hipster.graph.HipsterMutableGraph">
+</implements>
+<constructor name="HashBasedHipsterDirectedGraph"
+ type="es.usc.citius.hipster.graph.HashBasedHipsterDirectedGraph"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="create"
+ return="es.usc.citius.hipster.graph.HashBasedHipsterDirectedGraph&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="incomingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="outgoingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+</class>
+<class name="HashBasedHipsterGraph"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterMutableGraph">
+</implements>
+<constructor name="HashBasedHipsterGraph"
+ type="es.usc.citius.hipster.graph.HashBasedHipsterGraph"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="add"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v" type="V">
+</parameter>
+</method>
+<method name="add"
+ return="java.util.Set&lt;V&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertices" type="V...">
+</parameter>
+</method>
+<method name="buildEdge"
+ return="es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v1" type="V">
+</parameter>
+<parameter name="v2" type="V">
+</parameter>
+<parameter name="value" type="E">
+</parameter>
+</method>
+<method name="connect"
+ return="es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v1" type="V">
+</parameter>
+<parameter name="v2" type="V">
+</parameter>
+<parameter name="value" type="E">
+</parameter>
+</method>
+<method name="create"
+ return="es.usc.citius.hipster.graph.HashBasedHipsterGraph&lt;V, E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="edges"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="edgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="getConnected"
+ return="java.util.HashMap&lt;V, java.util.Set&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v" type="V">
+</parameter>
+</method>
+<method name="remove"
+ return="java.util.Set&lt;V&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertices" type="V...">
+</parameter>
+</method>
+<method name="setConnected"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="connected" type="java.util.HashMap&lt;V, java.util.Set&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;&gt;">
+</parameter>
+</method>
+<method name="vedges"
+ return="java.lang.Iterable&lt;java.util.Map.Entry&lt;V, es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="vertices"
+ return="java.lang.Iterable&lt;V&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="connected"
+ type="java.util.HashMap"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="HipsterDirectedGraph"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterGraph">
+</implements>
+<method name="incomingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="outgoingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+</interface>
+<interface name="HipsterGraph"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="edges"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="edgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="vertices"
+ return="java.lang.Iterable&lt;V&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="HipsterMutableGraph"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterGraph">
+</implements>
+<method name="add"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="add"
+ return="java.util.Set&lt;V&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertices" type="V...">
+</parameter>
+</method>
+<method name="connect"
+ return="es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex1" type="V">
+</parameter>
+<parameter name="vertex2" type="V">
+</parameter>
+<parameter name="edgeValue" type="E">
+</parameter>
+</method>
+<method name="remove"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="remove"
+ return="java.util.Set&lt;V&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertices" type="V...">
+</parameter>
+</method>
+</interface>
+<class name="Pair"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Pair"
+ type="es.usc.citius.hipster.graph.Pair"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e1" type="E">
+</parameter>
+<parameter name="e2" type="E">
+</parameter>
+</constructor>
+<method name="_1"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="_2"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getE1"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getE2"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setE1"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e1" type="E">
+</parameter>
+</method>
+<method name="setE2"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e2" type="E">
+</parameter>
+</method>
+</class>
+<class name="UndirectedEdge"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.GraphEdge">
+</implements>
+<constructor name="UndirectedEdge"
+ type="es.usc.citius.hipster.graph.UndirectedEdge"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex1" type="V">
+</parameter>
+<parameter name="vertex2" type="V">
+</parameter>
+<parameter name="value" type="E">
+</parameter>
+</constructor>
+<method name="getEdgeValue"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getType"
+ return="es.usc.citius.hipster.graph.GraphEdge.Type"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getVertex1"
+ return="V"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getVertex2"
+ return="V"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="UniqueEdge"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="UniqueEdge"
+ type="es.usc.citius.hipster.graph.UniqueEdge"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="V">
+</parameter>
+</constructor>
+<method name="create"
+ return="es.usc.citius.hipster.graph.UniqueEdge&lt;V&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="V">
+</parameter>
+</method>
+<method name="getEdgeId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getValue"
+ return="V"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setValue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="V">
+</parameter>
+</method>
+</class>
+<class name="UnorderedPair"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="UnorderedPair"
+ type="es.usc.citius.hipster.graph.UnorderedPair"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e1" type="E">
+</parameter>
+<parameter name="e2" type="E">
+</parameter>
+</constructor>
+<method name="contains"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="java.lang.Object">
+</parameter>
+</method>
+<method name="getE1"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getE2"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setE1"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e1" type="E">
+</parameter>
+</method>
+<method name="setE2"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e2" type="E">
+</parameter>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.model"
+>
+<interface name="ADStarNode"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.HeuristicNode">
+</implements>
+<method name="getG"
+ return="C"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getV"
+ return="C"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isConsistent"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isDoUpdate"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAction"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="A">
+</parameter>
+</method>
+<method name="setDoUpdate"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="update" type="boolean">
+</parameter>
+</method>
+<method name="setG"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="g" type="C">
+</parameter>
+</method>
+<method name="setKey"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="es.usc.citius.hipster.model.ADStarNode.Key&lt;C&gt;">
+</parameter>
+</method>
+<method name="setPreviousNode"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="N">
+</parameter>
+</method>
+<method name="setState"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+<method name="setV"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v" type="C">
+</parameter>
+</method>
+</interface>
+<class name="ADStarNode.Key"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.Comparable">
+</implements>
+<constructor name="ADStarNode.Key"
+ type="es.usc.citius.hipster.model.ADStarNode.Key"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="g" type="C">
+</parameter>
+<parameter name="v" type="C">
+</parameter>
+<parameter name="h" type="C">
+</parameter>
+<parameter name="e" type="double">
+</parameter>
+<parameter name="add" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+<parameter name="scale" type="es.usc.citius.hipster.model.function.ScalarFunction&lt;C&gt;">
+</parameter>
+</constructor>
+<constructor name="ADStarNode.Key"
+ type="es.usc.citius.hipster.model.ADStarNode.Key"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="first" type="C">
+</parameter>
+<parameter name="second" type="C">
+</parameter>
+</constructor>
+<method name="compareTo"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="o" type="es.usc.citius.hipster.model.ADStarNode.Key&lt;C&gt;">
+</parameter>
+</method>
+<method name="getFirst"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSecond"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AbstractNode"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.Node">
+</implements>
+<constructor name="AbstractNode"
+ type="es.usc.citius.hipster.model.AbstractNode"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="previousNode" type="N">
+</parameter>
+<parameter name="state" type="S">
+</parameter>
+<parameter name="action" type="A">
+</parameter>
+</constructor>
+<method name="action"
+ return="A"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="path"
+ return="java.util.List&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="pathSize"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="previousNode"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="state"
+ return="S"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="action"
+ type="A"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="pathSize"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="previousNode"
+ type="N"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="state"
+ type="S"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="CostNode"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.Comparable">
+</implements>
+<implements name="es.usc.citius.hipster.model.Node">
+</implements>
+<method name="getCost"
+ return="C"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="HeuristicNode"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.CostNode">
+</implements>
+<method name="getEstimation"
+ return="C"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getScore"
+ return="C"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="Node"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="action"
+ return="A"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="path"
+ return="java.util.List&lt;N&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="pathSize"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="previousNode"
+ return="N"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="state"
+ return="S"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="SimpleTransition"
+ extends="es.usc.citius.hipster.model.Transition"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="SimpleTransition"
+ type="es.usc.citius.hipster.model.SimpleTransition"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</constructor>
+<constructor name="SimpleTransition"
+ type="es.usc.citius.hipster.model.SimpleTransition"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fromState" type="S">
+</parameter>
+<parameter name="toState" type="S">
+</parameter>
+</constructor>
+</class>
+<class name="Transition"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Transition"
+ type="es.usc.citius.hipster.model.Transition"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="A">
+</parameter>
+<parameter name="state" type="S">
+</parameter>
+</constructor>
+<constructor name="Transition"
+ type="es.usc.citius.hipster.model.Transition"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fromState" type="S">
+</parameter>
+<parameter name="action" type="A">
+</parameter>
+<parameter name="toState" type="S">
+</parameter>
+</constructor>
+<method name="create"
+ return="es.usc.citius.hipster.model.Transition&lt;A, S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fromState" type="S">
+</parameter>
+<parameter name="action" type="A">
+</parameter>
+<parameter name="toState" type="S">
+</parameter>
+</method>
+<method name="create"
+ return="es.usc.citius.hipster.model.Transition&lt;java.lang.Void, S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fromState" type="S">
+</parameter>
+<parameter name="toState" type="S">
+</parameter>
+</method>
+<method name="getAction"
+ return="A"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getFromState"
+ return="S"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getState"
+ return="S"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAction"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="A">
+</parameter>
+</method>
+<method name="setState"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.model.function"
+>
+<interface name="ActionFunction"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="actionsFor"
+ return="java.lang.Iterable&lt;A&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+</interface>
+<interface name="ActionStateTransitionFunction"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="apply"
+ return="S"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="A">
+</parameter>
+<parameter name="state" type="S">
+</parameter>
+</method>
+</interface>
+<interface name="BinaryFunction"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="apply"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="T">
+</parameter>
+<parameter name="b" type="T">
+</parameter>
+</method>
+</interface>
+<interface name="CostFunction"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="evaluate"
+ return="C"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="transition" type="es.usc.citius.hipster.model.Transition&lt;A, S&gt;">
+</parameter>
+</method>
+</interface>
+<interface name="HeuristicFunction"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="estimate"
+ return="C"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+</interface>
+<interface name="NodeExpander"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="expand"
+ return="java.lang.Iterable&lt;N&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+</interface>
+<interface name="NodeFactory"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="makeNode"
+ return="N"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fromNode" type="N">
+</parameter>
+<parameter name="transition" type="es.usc.citius.hipster.model.Transition&lt;A, S&gt;">
+</parameter>
+</method>
+</interface>
+<interface name="ScalarFunction"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="scale"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="T">
+</parameter>
+<parameter name="b" type="double">
+</parameter>
+</method>
+</interface>
+<interface name="TransitionFunction"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="transitionsFrom"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.model.Transition&lt;A, S&gt;&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="es.usc.citius.hipster.model.function.impl"
+>
+<class name="ADStarNodeExpander"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.NodeExpander">
+</implements>
+<constructor name="ADStarNodeExpander"
+ type="es.usc.citius.hipster.model.function.impl.ADStarNodeExpander"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchComponents&lt;A, S, C&gt;">
+</parameter>
+<parameter name="factory" type="es.usc.citius.hipster.model.function.NodeFactory&lt;A, S, N&gt;">
+</parameter>
+<parameter name="epsilon" type="double">
+</parameter>
+</constructor>
+<constructor name="ADStarNodeExpander"
+ type="es.usc.citius.hipster.model.function.impl.ADStarNodeExpander"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="successorFunction" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;">
+</parameter>
+<parameter name="predecessorFunction" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;">
+</parameter>
+<parameter name="costFunction" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="heuristicFunction" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+<parameter name="add" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+<parameter name="scale" type="es.usc.citius.hipster.model.function.ScalarFunction&lt;C&gt;">
+</parameter>
+<parameter name="nodeFactory" type="es.usc.citius.hipster.model.function.NodeFactory&lt;A, S, N&gt;">
+</parameter>
+<parameter name="epsilon" type="double">
+</parameter>
+</constructor>
+<method name="clearVisited"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="expand"
+ return="java.lang.Iterable&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+<method name="expandTransitionsChanged"
+ return="java.lang.Iterable&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="begin" type="S">
+</parameter>
+<parameter name="current" type="N">
+</parameter>
+<parameter name="transitions" type="java.lang.Iterable&lt;es.usc.citius.hipster.model.Transition&lt;A, S&gt;&gt;">
+</parameter>
+</method>
+<method name="getVisited"
+ return="java.util.Map&lt;S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="makeNode"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="N">
+</parameter>
+<parameter name="transition" type="es.usc.citius.hipster.model.Transition&lt;A, S&gt;">
+</parameter>
+</method>
+<method name="setEpsilon"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="epsilon" type="double">
+</parameter>
+</method>
+<method name="setMaxV"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+</class>
+<class name="ADStarNodeFactory"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.NodeFactory">
+</implements>
+<constructor name="ADStarNodeFactory"
+ type="es.usc.citius.hipster.model.function.impl.ADStarNodeFactory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="addOp" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+<parameter name="scaleOp" type="es.usc.citius.hipster.model.function.impl.ScalarOperation&lt;C&gt;">
+</parameter>
+<parameter name="hf" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+</constructor>
+<constructor name="ADStarNodeFactory"
+ type="es.usc.citius.hipster.model.function.impl.ADStarNodeFactory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="components" type="es.usc.citius.hipster.model.problem.SearchComponents&lt;A, S, C&gt;">
+</parameter>
+</constructor>
+<method name="makeNode"
+ return="es.usc.citius.hipster.model.impl.ADStarNodeImpl&lt;A, S, C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="from" type="es.usc.citius.hipster.model.impl.ADStarNodeImpl&lt;A, S, C&gt;">
+</parameter>
+<parameter name="transition" type="es.usc.citius.hipster.model.Transition&lt;A, S&gt;">
+</parameter>
+</method>
+<field name="addOperation"
+ type="es.usc.citius.hipster.model.function.impl.BinaryOperation"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="hf"
+ type="es.usc.citius.hipster.model.function.HeuristicFunction"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="max"
+ type="C"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="min"
+ type="C"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="scaleOperation"
+ type="es.usc.citius.hipster.model.function.impl.ScalarOperation"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="ADStarNodeUpdater"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ADStarNodeUpdater"
+ type="es.usc.citius.hipster.model.function.impl.ADStarNodeUpdater"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="costFunction" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="heuristicFunction" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+<parameter name="add" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+<parameter name="scale" type="es.usc.citius.hipster.model.function.ScalarFunction&lt;C&gt;">
+</parameter>
+<parameter name="epsilon" type="double">
+</parameter>
+</constructor>
+</class>
+<class name="BinaryOperation"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.BinaryFunction">
+</implements>
+<constructor name="BinaryOperation"
+ type="es.usc.citius.hipster.model.function.impl.BinaryOperation"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="operation" type="es.usc.citius.hipster.model.function.BinaryFunction&lt;E&gt;">
+</parameter>
+<parameter name="identityElem" type="E">
+</parameter>
+<parameter name="maxElem" type="E">
+</parameter>
+</constructor>
+<method name="apply"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="E">
+</parameter>
+<parameter name="b" type="E">
+</parameter>
+</method>
+<method name="doubleAdditionOp"
+ return="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="doubleMultiplicationOp"
+ return="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIdentityElem"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMaxElem"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LazyActionStateTransitionFunction"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.TransitionFunction">
+</implements>
+<constructor name="LazyActionStateTransitionFunction"
+ type="es.usc.citius.hipster.model.function.impl.LazyActionStateTransitionFunction"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="af" type="es.usc.citius.hipster.model.function.ActionFunction&lt;A, S&gt;">
+</parameter>
+<parameter name="tf" type="es.usc.citius.hipster.model.function.ActionStateTransitionFunction&lt;A, S&gt;">
+</parameter>
+</constructor>
+<method name="transitionsFrom"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.model.Transition&lt;A, S&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+</class>
+<class name="LazyNodeExpander"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.NodeExpander">
+</implements>
+<constructor name="LazyNodeExpander"
+ type="es.usc.citius.hipster.model.function.impl.LazyNodeExpander"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tf" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;">
+</parameter>
+<parameter name="factory" type="es.usc.citius.hipster.model.function.NodeFactory&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<method name="expand"
+ return="java.lang.Iterable&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="node" type="N">
+</parameter>
+</method>
+<method name="getNodeFactory"
+ return="es.usc.citius.hipster.model.function.NodeFactory&lt;A, S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTransitionFunction"
+ return="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="Product"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.ScalarFunction">
+</implements>
+<constructor name="Product"
+ type="es.usc.citius.hipster.model.function.impl.Product"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="scale"
+ return="java.lang.Double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="java.lang.Double">
+</parameter>
+<parameter name="b" type="double">
+</parameter>
+</method>
+</class>
+<class name="ScalarOperation"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.ScalarFunction">
+</implements>
+<constructor name="ScalarOperation"
+ type="es.usc.citius.hipster.model.function.impl.ScalarOperation"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="operation" type="es.usc.citius.hipster.model.function.ScalarFunction&lt;E&gt;">
+</parameter>
+<parameter name="identityElem" type="double">
+</parameter>
+</constructor>
+<method name="doubleMultiplicationOp"
+ return="es.usc.citius.hipster.model.function.impl.ScalarOperation&lt;java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIdentityElem"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="scale"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="E">
+</parameter>
+<parameter name="b" type="double">
+</parameter>
+</method>
+</class>
+<class name="StateTransitionFunction"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.TransitionFunction">
+</implements>
+<constructor name="StateTransitionFunction"
+ type="es.usc.citius.hipster.model.function.impl.StateTransitionFunction"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="successorsOf"
+ return="java.lang.Iterable&lt;S&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+<method name="transitionsFrom"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.model.Transition&lt;java.lang.Void, S&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+</class>
+<class name="WeightedNodeFactory"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.function.NodeFactory">
+</implements>
+<constructor name="WeightedNodeFactory"
+ type="es.usc.citius.hipster.model.function.impl.WeightedNodeFactory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="costFunction" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="heuristicFunction" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+<parameter name="costAccumulator" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+</constructor>
+<constructor name="WeightedNodeFactory"
+ type="es.usc.citius.hipster.model.function.impl.WeightedNodeFactory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="costFunction" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="costAccumulator" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+</constructor>
+<method name="makeNode"
+ return="es.usc.citius.hipster.model.impl.WeightedNode&lt;A, S, C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fromNode" type="es.usc.citius.hipster.model.impl.WeightedNode&lt;A, S, C&gt;">
+</parameter>
+<parameter name="transition" type="es.usc.citius.hipster.model.Transition&lt;A, S&gt;">
+</parameter>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.model.impl"
+>
+<class name="ADStarNodeImpl"
+ extends="es.usc.citius.hipster.model.AbstractNode"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.ADStarNode">
+</implements>
+<constructor name="ADStarNodeImpl"
+ type="es.usc.citius.hipster.model.impl.ADStarNodeImpl"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="transition" type="es.usc.citius.hipster.model.Transition&lt;A, S&gt;">
+</parameter>
+<parameter name="previousNode" type="es.usc.citius.hipster.model.impl.ADStarNodeImpl&lt;A, S, C&gt;">
+</parameter>
+<parameter name="g" type="C">
+</parameter>
+<parameter name="v" type="C">
+</parameter>
+<parameter name="k" type="es.usc.citius.hipster.model.ADStarNode.Key&lt;C&gt;">
+</parameter>
+</constructor>
+<method name="compareTo"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="o" type="es.usc.citius.hipster.model.impl.ADStarNodeImpl&lt;A, S, C&gt;">
+</parameter>
+</method>
+<method name="getCost"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getEstimation"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getG"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getScore"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getV"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isConsistent"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isDoUpdate"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAction"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="A">
+</parameter>
+</method>
+<method name="setDoUpdate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="doUpdate" type="boolean">
+</parameter>
+</method>
+<method name="setG"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="g" type="C">
+</parameter>
+</method>
+<method name="setKey"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="key" type="es.usc.citius.hipster.model.ADStarNode.Key&lt;C&gt;">
+</parameter>
+</method>
+<method name="setPreviousNode"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="es.usc.citius.hipster.model.impl.ADStarNodeImpl&lt;A, S, C&gt;">
+</parameter>
+</method>
+<method name="setState"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="state" type="S">
+</parameter>
+</method>
+<method name="setV"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="v" type="C">
+</parameter>
+</method>
+<field name="doUpdate"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="g"
+ type="C"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="key"
+ type="es.usc.citius.hipster.model.ADStarNode.Key"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="v"
+ type="C"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="UnweightedNode"
+ extends="es.usc.citius.hipster.model.AbstractNode"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="UnweightedNode"
+ type="es.usc.citius.hipster.model.impl.UnweightedNode"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="previousNode" type="es.usc.citius.hipster.model.impl.UnweightedNode&lt;A, S&gt;">
+</parameter>
+<parameter name="state" type="S">
+</parameter>
+<parameter name="action" type="A">
+</parameter>
+</constructor>
+<constructor name="UnweightedNode"
+ type="es.usc.citius.hipster.model.impl.UnweightedNode"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="previousNode" type="es.usc.citius.hipster.model.impl.UnweightedNode&lt;A, S&gt;">
+</parameter>
+<parameter name="transition" type="es.usc.citius.hipster.model.Transition&lt;A, S&gt;">
+</parameter>
+</constructor>
+<method name="newNodeWithoutAction"
+ return="es.usc.citius.hipster.model.impl.UnweightedNode&lt;java.lang.Void, S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="previousNode" type="es.usc.citius.hipster.model.impl.UnweightedNode&lt;java.lang.Void, S&gt;">
+</parameter>
+<parameter name="state" type="S">
+</parameter>
+</method>
+</class>
+<class name="WeightedNode"
+ extends="es.usc.citius.hipster.model.AbstractNode"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.model.HeuristicNode">
+</implements>
+<constructor name="WeightedNode"
+ type="es.usc.citius.hipster.model.impl.WeightedNode"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="previousNode" type="es.usc.citius.hipster.model.impl.WeightedNode&lt;A, S, C&gt;">
+</parameter>
+<parameter name="state" type="S">
+</parameter>
+<parameter name="action" type="A">
+</parameter>
+<parameter name="cost" type="C">
+</parameter>
+<parameter name="estimation" type="C">
+</parameter>
+<parameter name="score" type="C">
+</parameter>
+</constructor>
+<method name="compareTo"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="o" type="es.usc.citius.hipster.model.impl.WeightedNode&lt;A, S, C&gt;">
+</parameter>
+</method>
+<method name="getCost"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getEstimation"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getScore"
+ return="C"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.model.problem"
+>
+<class name="ProblemBuilder"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="create"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ProblemBuilder.Wizard"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="initialState"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState&lt;S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialState" type="S">
+</parameter>
+</method>
+<method name="initialState"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState&lt;S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialState" type="S">
+</parameter>
+<parameter name="finalState" type="S">
+</parameter>
+</method>
+</class>
+<class name="ProblemBuilder.Wizard.ActionState"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ProblemBuilder.Wizard.ActionState"
+ type="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialState" type="S">
+</parameter>
+</constructor>
+<constructor name="ProblemBuilder.Wizard.ActionState"
+ type="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialState" type="S">
+</parameter>
+<parameter name="finalState" type="S">
+</parameter>
+</constructor>
+<method name="defineProblemWithExplicitActions"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.WithAction"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="defineProblemWithoutActions"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.WithoutAction"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ProblemBuilder.Wizard.ActionState.Uninformed"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="build"
+ return="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, es.usc.citius.hipster.model.impl.UnweightedNode&lt;A, S&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="useCostFunction"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.Uninformed.Informed&lt;java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cf" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, java.lang.Double&gt;">
+</parameter>
+</method>
+<method name="useGenericCostFunction"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.Uninformed.Informed&lt;C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cf" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="costAlgebra" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+</method>
+</class>
+<class name="ProblemBuilder.Wizard.ActionState.Uninformed.Informed"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ProblemBuilder.Wizard.ActionState.Uninformed.Informed"
+ type="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.Uninformed.Informed"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cf" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="costAlgebra" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+</constructor>
+<method name="build"
+ return="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, es.usc.citius.hipster.model.impl.WeightedNode&lt;A, S, C&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="useHeuristicFunction"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.Uninformed.Informed.Heuristic"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="hf" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+</method>
+</class>
+<class name="ProblemBuilder.Wizard.ActionState.Uninformed.Informed.Heuristic"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ProblemBuilder.Wizard.ActionState.Uninformed.Informed.Heuristic"
+ type="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.Uninformed.Informed.Heuristic"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="hf" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+</constructor>
+<method name="build"
+ return="es.usc.citius.hipster.model.problem.SearchProblem&lt;A, S, es.usc.citius.hipster.model.impl.WeightedNode&lt;A, S, C&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ProblemBuilder.Wizard.ActionState.WithAction"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="useActionFunction"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.WithAction.Action&lt;A&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="actionFunction" type="es.usc.citius.hipster.model.function.ActionFunction&lt;A, S&gt;">
+</parameter>
+</method>
+<method name="useTransitionFunction"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.Uninformed&lt;A&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="transitionFunction" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;">
+</parameter>
+</method>
+</class>
+<class name="ProblemBuilder.Wizard.ActionState.WithAction.Action"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ProblemBuilder.Wizard.ActionState.WithAction.Action"
+ type="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.WithAction.Action"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="af" type="es.usc.citius.hipster.model.function.ActionFunction&lt;A, S&gt;">
+</parameter>
+</constructor>
+<method name="useTransitionFunction"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.Uninformed&lt;A&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="atf" type="es.usc.citius.hipster.model.function.ActionStateTransitionFunction&lt;A, S&gt;">
+</parameter>
+</method>
+</class>
+<class name="ProblemBuilder.Wizard.ActionState.WithoutAction"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="useTransitionFunction"
+ return="es.usc.citius.hipster.model.problem.ProblemBuilder.Wizard.ActionState.Uninformed&lt;java.lang.Void&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="transitionFunction" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;java.lang.Void, S&gt;">
+</parameter>
+</method>
+</class>
+<class name="SearchComponents"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="SearchComponents"
+ type="es.usc.citius.hipster.model.problem.SearchComponents"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="begin" type="S">
+</parameter>
+<parameter name="goal" type="S">
+</parameter>
+<parameter name="cf" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="hf" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+<parameter name="sf" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;">
+</parameter>
+<parameter name="pf" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;">
+</parameter>
+<parameter name="costAlgebra" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+<parameter name="scaleOperation" type="es.usc.citius.hipster.model.function.impl.ScalarOperation&lt;C&gt;">
+</parameter>
+</constructor>
+<constructor name="SearchComponents"
+ type="es.usc.citius.hipster.model.problem.SearchComponents"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="begin" type="S">
+</parameter>
+<parameter name="goal" type="S">
+</parameter>
+<parameter name="cf" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="hf" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+<parameter name="sf" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;">
+</parameter>
+<parameter name="costAlgebra" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+</constructor>
+<constructor name="SearchComponents"
+ type="es.usc.citius.hipster.model.problem.SearchComponents"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="begin" type="S">
+</parameter>
+<parameter name="goal" type="S">
+</parameter>
+<parameter name="cf" type="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;">
+</parameter>
+<parameter name="hf" type="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;">
+</parameter>
+<parameter name="sf" type="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;">
+</parameter>
+<parameter name="costAlgebra" type="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;">
+</parameter>
+<parameter name="scaleOperation" type="es.usc.citius.hipster.model.function.impl.ScalarOperation&lt;C&gt;">
+</parameter>
+</constructor>
+<method name="costAlgebra"
+ return="es.usc.citius.hipster.model.function.impl.BinaryOperation&lt;C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="costFunction"
+ return="es.usc.citius.hipster.model.function.CostFunction&lt;A, S, C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getBegin"
+ return="S"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getGoal"
+ return="S"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="heuristicFunction"
+ return="es.usc.citius.hipster.model.function.HeuristicFunction&lt;S, C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="predecessorFunction"
+ return="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="scaleAlgebra"
+ return="es.usc.citius.hipster.model.function.impl.ScalarOperation&lt;C&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="successorFunction"
+ return="es.usc.citius.hipster.model.function.TransitionFunction&lt;A, S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="SearchProblem"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="SearchProblem"
+ type="es.usc.citius.hipster.model.problem.SearchProblem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="expander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<constructor name="SearchProblem"
+ type="es.usc.citius.hipster.model.problem.SearchProblem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="initialNode" type="N">
+</parameter>
+<parameter name="finalNode" type="N">
+</parameter>
+<parameter name="expander" type="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;">
+</parameter>
+</constructor>
+<method name="getExpander"
+ return="es.usc.citius.hipster.model.function.NodeExpander&lt;A, S, N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getFinalNode"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInitialNode"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setFinalNode"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="finalNode" type="N">
+</parameter>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.thirdparty.graphs.blueprints"
+>
+<class name="BlueprintsHipsterDirectedGraphAdapter"
+ extends="es.usc.citius.hipster.thirdparty.graphs.blueprints.BlueprintsHipsterGraphAdapter"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterDirectedGraph">
+</implements>
+<constructor name="BlueprintsHipsterDirectedGraphAdapter"
+ type="es.usc.citius.hipster.thirdparty.graphs.blueprints.BlueprintsHipsterDirectedGraphAdapter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="graph" type="com.tinkerpop.blueprints.Graph">
+</parameter>
+</constructor>
+<method name="incomingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;com.tinkerpop.blueprints.Vertex, com.tinkerpop.blueprints.Edge&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="com.tinkerpop.blueprints.Vertex">
+</parameter>
+</method>
+<method name="outgoingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;com.tinkerpop.blueprints.Vertex, com.tinkerpop.blueprints.Edge&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="com.tinkerpop.blueprints.Vertex">
+</parameter>
+</method>
+</class>
+<class name="BlueprintsHipsterGraphAdapter"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterGraph">
+</implements>
+<constructor name="BlueprintsHipsterGraphAdapter"
+ type="es.usc.citius.hipster.thirdparty.graphs.blueprints.BlueprintsHipsterGraphAdapter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="graph" type="com.tinkerpop.blueprints.Graph">
+</parameter>
+</constructor>
+<method name="convertEdges"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;com.tinkerpop.blueprints.Vertex, com.tinkerpop.blueprints.Edge&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="edges" type="java.lang.Iterable&lt;com.tinkerpop.blueprints.Edge&gt;">
+</parameter>
+</method>
+<method name="edges"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;com.tinkerpop.blueprints.Vertex, com.tinkerpop.blueprints.Edge&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="edgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;com.tinkerpop.blueprints.Vertex, com.tinkerpop.blueprints.Edge&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="com.tinkerpop.blueprints.Vertex">
+</parameter>
+</method>
+<method name="vertices"
+ return="java.lang.Iterable&lt;com.tinkerpop.blueprints.Vertex&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.thirdparty.graphs.jung"
+>
+<class name="JUNGHipsterDirectedGraphAdapter"
+ extends="es.usc.citius.hipster.thirdparty.graphs.jung.JUNGHipsterGraphAdapter"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterDirectedGraph">
+</implements>
+<constructor name="JUNGHipsterDirectedGraphAdapter"
+ type="es.usc.citius.hipster.thirdparty.graphs.jung.JUNGHipsterDirectedGraphAdapter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="graph" type="edu.uci.ics.jung.graph.Graph&lt;V, E&gt;">
+</parameter>
+</constructor>
+<method name="incomingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="outgoingEdgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+</class>
+<class name="JUNGHipsterGraphAdapter"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.hipster.graph.HipsterGraph">
+</implements>
+<constructor name="JUNGHipsterGraphAdapter"
+ type="es.usc.citius.hipster.thirdparty.graphs.jung.JUNGHipsterGraphAdapter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="graph" type="edu.uci.ics.jung.graph.Graph&lt;V, E&gt;">
+</parameter>
+</constructor>
+<method name="adapt"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="iterable" type="java.lang.Iterable&lt;E&gt;">
+</parameter>
+</method>
+<method name="edges"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="edgesOf"
+ return="java.lang.Iterable&lt;es.usc.citius.hipster.graph.GraphEdge&lt;V, E&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vertex" type="V">
+</parameter>
+</method>
+<method name="vertices"
+ return="java.lang.Iterable&lt;V&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="graph"
+ type="edu.uci.ics.jung.graph.Graph"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+</package>
+<package name="es.usc.citius.hipster.util"
+>
+<class name="F"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="filter"
+ return="java.lang.Iterable&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="it" type="java.lang.Iterable&lt;T&gt;">
+</parameter>
+<parameter name="condition" type="es.usc.citius.hipster.util.Function&lt;? super T, java.lang.Boolean&gt;">
+</parameter>
+</method>
+<method name="filter"
+ return="java.util.Iterator&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="it" type="java.util.Iterator&lt;T&gt;">
+</parameter>
+<parameter name="condition" type="es.usc.citius.hipster.util.Function&lt;? super T, java.lang.Boolean&gt;">
+</parameter>
+</method>
+<method name="flatMap"
+ return="java.lang.Iterable&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="it" type="java.lang.Iterable&lt;E&gt;">
+</parameter>
+<parameter name="mapf" type="es.usc.citius.hipster.util.Function&lt;? super E, ? extends java.lang.Iterable&lt;? extends T&gt;&gt;">
+</parameter>
+</method>
+<method name="flatMap"
+ return="java.util.Iterator&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="it" type="java.util.Iterator&lt;E&gt;">
+</parameter>
+<parameter name="mapf" type="es.usc.citius.hipster.util.Function&lt;? super E, ? extends java.util.Iterator&lt;? extends T&gt;&gt;">
+</parameter>
+</method>
+<method name="map"
+ return="java.lang.Iterable&lt;E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="it" type="java.lang.Iterable&lt;T&gt;">
+</parameter>
+<parameter name="mapf" type="es.usc.citius.hipster.util.Function&lt;? super T, ? extends E&gt;">
+</parameter>
+</method>
+<method name="map"
+ return="java.util.Iterator&lt;E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="it" type="java.util.Iterator&lt;T&gt;">
+</parameter>
+<parameter name="mapf" type="es.usc.citius.hipster.util.Function&lt;? super T, ? extends E&gt;">
+</parameter>
+</method>
+</class>
+<interface name="Function"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="apply"
+ return="V"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="E">
+</parameter>
+</method>
+</interface>
+<class name="Iterators"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Iterators"
+ type="es.usc.citius.hipster.util.Iterators"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="empty"
+ return="java.util.Iterator&lt;E&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="Iterators.AbstractIterator"
+ extends="java.lang.Object"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.util.Iterator">
+</implements>
+<constructor name="Iterators.AbstractIterator"
+ type="es.usc.citius.hipster.util.Iterators.AbstractIterator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="computeNext"
+ return="E"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="hasNext"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="next"
+ return="E"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="remove"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="current"
+ type="E"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="Predicate"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="apply"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="T">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="es.usc.citius.hipster.util.examples"
+>
+<class name="RomanianProblem"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="RomanianProblem"
+ type="es.usc.citius.hipster.util.examples.RomanianProblem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="graph"
+ return="es.usc.citius.hipster.graph.HipsterGraph&lt;es.usc.citius.hipster.util.examples.RomanianProblem.City, java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="heuristicFunction"
+ return="es.usc.citius.hipster.model.function.HeuristicFunction&lt;es.usc.citius.hipster.util.examples.RomanianProblem.City, java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="heuristics"
+ return="java.util.Map&lt;es.usc.citius.hipster.util.examples.RomanianProblem.City, java.lang.Double&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="RomanianProblem.City"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="es.usc.citius.hipster.util.examples.RomanianProblem.City"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="es.usc.citius.hipster.util.examples.RomanianProblem.City[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.hipster.util.examples.maze"
+>
+<class name="Maze2D"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Maze2D"
+ type="es.usc.citius.hipster.util.examples.maze.Maze2D"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="maze" type="char[][]">
+</parameter>
+</constructor>
+<constructor name="Maze2D"
+ type="es.usc.citius.hipster.util.examples.maze.Maze2D"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="maze2D" type="java.lang.String[]">
+</parameter>
+<exception name="IllegalFormatException" type="java.util.IllegalFormatException">
+</exception>
+</constructor>
+<method name="diff"
+ return="java.util.Set&lt;java.awt.Point&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="to" type="es.usc.citius.hipster.util.examples.maze.Maze2D">
+</parameter>
+</method>
+<method name="empty"
+ return="es.usc.citius.hipster.util.examples.maze.Maze2D"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="size" type="int">
+</parameter>
+</method>
+<method name="getGoalLoc"
+ return="java.awt.Point"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInitialLoc"
+ return="java.awt.Point"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMaze"
+ return="char[][]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMazeCharArray"
+ return="char[][]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMazePoints"
+ return="java.util.List&lt;java.awt.Point&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getReplacedMazeString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="replacements" type="java.util.List&lt;java.util.Map&lt;java.awt.Point, java.lang.Character&gt;&gt;">
+</parameter>
+</method>
+<method name="getStringMazeFilled"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="points" type="java.util.Collection&lt;java.awt.Point&gt;">
+</parameter>
+<parameter name="symbol" type="char">
+</parameter>
+</method>
+<method name="isFree"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="java.awt.Point">
+</parameter>
+</method>
+<method name="pointInBounds"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="loc" type="java.awt.Point">
+</parameter>
+</method>
+<method name="putObstacle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="java.awt.Point">
+</parameter>
+</method>
+<method name="putObstacleRectangle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="java.awt.Point">
+</parameter>
+<parameter name="b" type="java.awt.Point">
+</parameter>
+</method>
+<method name="read"
+ return="es.usc.citius.hipster.util.examples.maze.Maze2D"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="java.io.File">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="removeObstacle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="java.awt.Point">
+</parameter>
+</method>
+<method name="removeObstacleRectangle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="java.awt.Point">
+</parameter>
+<parameter name="b" type="java.awt.Point">
+</parameter>
+</method>
+<method name="toStringArray"
+ return="java.lang.String[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="updateLocation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="java.awt.Point">
+</parameter>
+<parameter name="symbol" type="es.usc.citius.hipster.util.examples.maze.Maze2D.Symbol">
+</parameter>
+</method>
+<method name="updateRectangle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="a" type="java.awt.Point">
+</parameter>
+<parameter name="b" type="java.awt.Point">
+</parameter>
+<parameter name="symbol" type="es.usc.citius.hipster.util.examples.maze.Maze2D.Symbol">
+</parameter>
+</method>
+<method name="validLocation"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="loc" type="java.awt.Point">
+</parameter>
+</method>
+<method name="validLocationsFrom"
+ return="java.util.Collection&lt;java.awt.Point&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="loc" type="java.awt.Point">
+</parameter>
+</method>
+</class>
+<class name="Maze2D.Symbol"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="parse"
+ return="es.usc.citius.hipster.util.examples.maze.Maze2D.Symbol"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="c" type="char">
+</parameter>
+</method>
+<method name="value"
+ return="char"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="es.usc.citius.hipster.util.examples.maze.Maze2D.Symbol"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="es.usc.citius.hipster.util.examples.maze.Maze2D.Symbol[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="character"
+ type="char"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="MazeSearch"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="clearOutput"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newlines" type="int">
+</parameter>
+</method>
+<method name="getMazeStringSolution"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="maze" type="es.usc.citius.hipster.util.examples.maze.Maze2D">
+</parameter>
+<parameter name="explored" type="java.util.Collection&lt;java.awt.Point&gt;">
+</parameter>
+<parameter name="path" type="java.util.Collection&lt;java.awt.Point&gt;">
+</parameter>
+</method>
+<method name="printSearch"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="it" type="java.util.Iterator&lt;? extends es.usc.citius.hipster.model.Node&lt;?, java.awt.Point, ?&gt;&gt;">
+</parameter>
+<parameter name="maze" type="es.usc.citius.hipster.util.examples.maze.Maze2D">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+</class>
+<class name="MazeSearch.Result"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MazeSearch.Result"
+ type="es.usc.citius.hipster.util.examples.maze.MazeSearch.Result"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="path" type="java.util.List&lt;java.awt.Point&gt;">
+</parameter>
+<parameter name="cost" type="java.lang.Double">
+</parameter>
+</constructor>
+<method name="getCost"
+ return="java.lang.Double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPath"
+ return="java.util.List&lt;java.awt.Point&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="NO_RESULT"
+ type="es.usc.citius.hipster.util.examples.maze.MazeSearch.Result"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="Mazes"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<field name="exampleMaze1"
+ type="java.lang.String[]"
+ transient="false"
+ volatile="false"
+ value="null"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="testMaze1"
+ type="java.lang.String[]"
+ transient="false"
+ volatile="false"
+ value="null"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="testMaze2"
+ type="java.lang.String[]"
+ transient="false"
+ volatile="false"
+ value="null"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="testMaze3"
+ type="java.lang.String[]"
+ transient="false"
+ volatile="false"
+ value="null"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="testMaze4"
+ type="java.lang.String[]"
+ transient="false"
+ volatile="false"
+ value="null"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="testMaze5"
+ type="java.lang.String[]"
+ transient="false"
+ volatile="false"
+ value="null"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="Mazes.TestMaze"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getMaze"
+ return="es.usc.citius.hipster.util.examples.maze.Maze2D"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMinimalPathCost"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="es.usc.citius.hipster.util.examples.maze.Mazes.TestMaze"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="es.usc.citius.hipster.util.examples.maze.Mazes.TestMaze[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.lab.hipster.collections"
+>
+<class name="FibonacciHeap"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="FibonacciHeap"
+ type="es.usc.citius.lab.hipster.collections.FibonacciHeap"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="decreaseKey"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entry" type="es.usc.citius.lab.hipster.collections.FibonacciHeap.Entry&lt;T&gt;">
+</parameter>
+<parameter name="newPriority" type="double">
+</parameter>
+</method>
+<method name="delete"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entry" type="es.usc.citius.lab.hipster.collections.FibonacciHeap.Entry&lt;T&gt;">
+</parameter>
+</method>
+<method name="dequeueMin"
+ return="es.usc.citius.lab.hipster.collections.FibonacciHeap.Entry&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="enqueue"
+ return="es.usc.citius.lab.hipster.collections.FibonacciHeap.Entry&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="T">
+</parameter>
+<parameter name="priority" type="double">
+</parameter>
+</method>
+<method name="isEmpty"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="merge"
+ return="es.usc.citius.lab.hipster.collections.FibonacciHeap&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="one" type="es.usc.citius.lab.hipster.collections.FibonacciHeap&lt;T&gt;">
+</parameter>
+<parameter name="two" type="es.usc.citius.lab.hipster.collections.FibonacciHeap&lt;T&gt;">
+</parameter>
+</method>
+<method name="min"
+ return="es.usc.citius.lab.hipster.collections.FibonacciHeap.Entry&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="size"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="FibonacciHeap.Entry"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getPriority"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getValue"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setValue"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="T">
+</parameter>
+</method>
+</class>
+<class name="HashQueue"
+ extends="java.util.AbstractQueue"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="HashQueue"
+ type="es.usc.citius.lab.hipster.collections.HashQueue"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="iterator"
+ return="java.util.Iterator&lt;S&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="offer"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e" type="S">
+</parameter>
+</method>
+<method name="peek"
+ return="S"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="poll"
+ return="S"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="size"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="es.usc.citius.lab.hipster.collections.adapter"
+>
+<class name="HeuristicNodePriorityEvaluator"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="es.usc.citius.lab.hipster.collections.adapter.PriorityEvaluator">
+</implements>
+<constructor name="HeuristicNodePriorityEvaluator"
+ type="es.usc.citius.lab.hipster.collections.adapter.HeuristicNodePriorityEvaluator"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getPriority"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="n" type="N">
+</parameter>
+</method>
+</class>
+<interface name="PriorityEvaluator"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getPriority"
+ return="double"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="n" type="N">
+</parameter>
+</method>
+</interface>
+<class name="PriorityFibonacciQueue"
+ extends="java.util.AbstractQueue"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="PriorityFibonacciQueue"
+ type="es.usc.citius.lab.hipster.collections.adapter.PriorityFibonacciQueue"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="evaluator" type="es.usc.citius.lab.hipster.collections.adapter.PriorityEvaluator&lt;N&gt;">
+</parameter>
+</constructor>
+<method name="iterator"
+ return="java.util.Iterator&lt;N&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="offer"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="n" type="N">
+</parameter>
+</method>
+<method name="peek"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="poll"
+ return="N"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="size"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+</api>
